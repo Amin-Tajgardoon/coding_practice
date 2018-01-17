@@ -7,7 +7,6 @@ Created on Mon Dec 25 19:00:03 2017
 
 import numpy as np
 
-
 def twoSum(nums, target):
     """
     :type nums: List[int]
@@ -22,13 +21,14 @@ def twoSum(nums, target):
             return [i, dic[complement]] 
         dic[nums[i]] = i
 
-
 if __name__ == "__main__":
         
-    nums = np.random.randint(0,1000000, size=500000).tolist()
+    nums = np.random.randint(0,1000000, size=500000).tolist()   
+    indx1 = len(nums)-1
+    indx2 = len(nums)-2
+    nums[indx1] = -2
+    nums[indx2] = -1
     
-    nums[len(nums)-2] = -1
-    nums[len(nums)-1] = -1
-    
-    result = twoSum(nums, -2)
-    assert result == [499999, 499998]      
+    result = twoSum(nums, -3)
+    print(result)
+    assert result == [indx1, indx2]      
