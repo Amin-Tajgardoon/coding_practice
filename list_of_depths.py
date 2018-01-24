@@ -2,6 +2,7 @@
 """
 Created on Wed Jan 24 15:42:43 2018
 
+Question: Given a binary tree, return one linkedlist per depth
 @author: Amin
 """
 
